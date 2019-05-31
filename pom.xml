@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.vertxup</groupId>
+    <artifactId>vertx-ix</artifactId>
+    <version>0.1.0</version>
+    <modules>
+        <module>zero-rbac</module>
+        <module>zero-aups</module>
+    </modules>
+    <packaging>pom</packaging>
+    <properties>
+        <zero.version>0.4.10-SNAPSHOT</zero.version>
+        <java.version>1.8</java.version>
+        <encoding>UTF-8</encoding>
+    </properties>
+    <name>Zero扩展模块 - 真实项目扩展</name>
+    <dependencies>
+        <dependency>
+            <groupId>cn.vertxup</groupId>
+            <artifactId>vertx-rx</artifactId>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.vertxup</groupId>
+                <artifactId>vertx-rx</artifactId>
+                <version>${zero.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${encoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
